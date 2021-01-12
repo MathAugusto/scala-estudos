@@ -62,3 +62,18 @@ val Fulano = Pessoa("Fulano", 29, "011988888888")
 val Ciclano = Pessoa("Ciclano", 98, "01309000000")
 
 println(Fulano, Ciclano)
+
+
+// APPLY-------
+object Reversor{
+  def apply(s: String): String =
+    s.reverse
+}
+Reversor("MATHEUS")
+
+
+// UNAPPLY
+case class Time(hours: Int = 0, minutes: Int = 0)
+val time = Time(9,1)
+
+Time.unapply(time)
